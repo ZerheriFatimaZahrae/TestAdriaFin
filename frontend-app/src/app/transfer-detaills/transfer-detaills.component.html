@@ -1,0 +1,106 @@
+<div class="container" *ngIf="detaills">
+  <h2>Détails du Transfert</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Attribut</th>
+      <th>Valeur</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Détails du transfert -->
+    <tr>
+      <td>ID Transfert</td>
+      <td>{{ detaills.id }}</td>
+    </tr>
+    <tr>
+      <td>Montant</td>
+      <td>{{ detaills.amount }}</td>
+    </tr>
+    <tr>
+      <td>État</td>
+      <td>{{ detaills.etat }}</td>
+    </tr>
+    <tr>
+      <td>Date du Transfert</td>
+      <td>{{ detaills.transferDate | date:'dd/MM/yyyy HH:mm' }}</td>
+    </tr>
+
+    <!-- Détails du portefeuille émetteur -->
+    <tr>
+      <td colspan="2"><strong>Portefeuille Émetteur</strong></td>
+    </tr>
+    <tr>
+      <td>ID Portefeuille Émetteur</td>
+      <td>{{ detaills.walletSender.id }}</td>
+    </tr>
+    <tr>
+      <td>Solde</td>
+      <td>{{ detaills.walletSender.balance }}</td>
+    </tr>
+    <tr>
+      <td>Devise</td>
+      <td>{{ detaills.walletSender.currency }}</td>
+    </tr>
+    <tr>
+      <td>Date de Création</td>
+      <td>{{ detaills.walletSender.creationDate | date:'dd/MM/yyyy' }}</td>
+    </tr>
+
+    <!-- Détails du client émetteur -->
+    <tr>
+      <td colspan="2"><strong>Client Émetteur</strong></td>
+    </tr>
+    <tr>
+      <td>ID Client</td>
+      <td>{{ detaills.walletSender.client.id }}</td>
+    </tr>
+    <tr>
+      <td>Nom</td>
+      <td>{{ detaills.walletSender.client.name }}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{ detaills.walletSender.client.email }}</td>
+    </tr>
+
+    <!-- Détails du portefeuille récepteur -->
+    <tr>
+      <td colspan="2"><strong>Portefeuille Récepteur</strong></td>
+    </tr>
+    <tr>
+      <td>ID Portefeuille Récepteur</td>
+      <td>{{ detaills.walletReceiver.id }}</td>
+    </tr>
+    <tr>
+      <td>Solde</td>
+      <td>{{ detaills.walletReceiver.balance }}</td>
+    </tr>
+    <tr>
+      <td>Devise</td>
+      <td>{{ detaills.walletReceiver.currency }}</td>
+    </tr>
+    <tr>
+      <td>Date de Création</td>
+      <td>{{ detaills.walletReceiver.creationDate | date:'dd/MM/yyyy' }}</td>
+    </tr>
+
+    <!-- Détails du client récepteur -->
+    <tr>
+      <td colspan="2"><strong>Client Récepteur</strong></td>
+    </tr>
+    <tr>
+      <td>ID Client</td>
+      <td>{{ detaills.walletReceiver.client.id }}</td>
+    </tr>
+    <tr>
+      <td>Nom</td>
+      <td>{{ detaills.walletReceiver.client.name }}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{ detaills.walletReceiver.client.email }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

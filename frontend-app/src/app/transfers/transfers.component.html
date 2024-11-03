@@ -1,0 +1,32 @@
+<div class="container" *ngIf="transfers.length > 0">
+  <h2>Liste des Transferts</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Montant</th>
+      <th>État</th>
+      <th>ID Portefeuille Émetteur</th>
+      <th>ID Portefeuille Récepteur</th>
+      <th>Date du Transfert</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let transfer of transfers">
+      <td>{{ transfer.id }}</td>
+      <td>{{ transfer.amount }}</td>
+      <td>{{ transfer.etat }}</td>
+      <td>{{ transfer.walletSenderID }}</td>
+      <td>{{ transfer.walletReceiverID }}</td>
+      <td>{{ transfer.transferDate | date:'dd/MM/yyyy HH:mm' }}</td>
+      <td>
+        <button class="btn btn-success" (click)="getDetails(transfer)">Details</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="transfers.length === 0">
+  <p>Aucun transfert n'a été trouvé.</p>
+</div>

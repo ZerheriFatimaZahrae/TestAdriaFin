@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table" *ngIf="wallets">
+    <thead>
+    <tr>
+      <th>ID</th> <th>Balance </th> <th>Currency</th> <th>Creation Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of wallets._embedded.wallets">
+      <td>{{c.id}}</td>
+      <td>{{c.balance}}</td>
+      <td>{{c.currency}}</td>
+      <td>{{c.creationDate}}</td>
+      <td>
+        <button class="btn btn-success" (click)="getClient(c)">Client</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
