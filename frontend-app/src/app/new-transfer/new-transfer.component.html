@@ -1,0 +1,23 @@
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <form [formGroup]="transferForm" (ngSubmit)="onSubmit()" style="padding: 20px; border: 1px solid #ccc; border-radius: 5px; max-width: 500px; width: 100%;">
+    <h3 style="text-align: center;">Nouvelle Opération</h3>
+    <br>
+
+    <label for="walletSourceId" style="margin-bottom: 8px;">Wallet Source</label>
+    <input type="text" id="walletSourceId" formControlName="walletSourceId" required
+           style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; width: 100%;">
+
+    <label for="walletDestinationId" style="margin-bottom: 8px;">Wallet Destination</label>
+    <input type="text" id="walletDestinationId" formControlName="walletDestinationId" required
+           style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; width: 100%;">
+
+    <label for="amount" style="margin-bottom: 8px;">Montant</label>
+    <input type="number" id="amount" formControlName="amount" required
+           style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; width: 100%;">
+
+    <button type="submit"
+            style="background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; width: 100%;">
+      Valider Opération
+    </button>
+  </form>
+</div>

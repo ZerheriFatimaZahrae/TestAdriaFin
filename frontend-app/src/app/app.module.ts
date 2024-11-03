@@ -8,6 +8,14 @@ import {HttpClientModule} from "@angular/common/http";
 import { ClientsComponent } from './clients/clients.component';
 import { TransfersComponent } from './transfers/transfers.component';
 import { TransferDetaillsComponent } from './transfer-detaills/transfer-detaills.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { NewTransferComponent } from './new-transfer/new-transfer.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -15,15 +23,23 @@ import { TransferDetaillsComponent } from './transfer-detaills/transfer-detaills
     WalletComponent,
     ClientsComponent,
     TransfersComponent,
-    TransferDetaillsComponent
+    TransferDetaillsComponent,
+    NewTransferComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSnackBarModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-<div class="container" *ngIf="transfers.length > 0">
+<div class="container m-5" *ngIf="transfers.length > 0">
   <h2>Liste des Transferts</h2>
   <table class="table">
     <thead>
@@ -29,4 +29,9 @@
 
 <div *ngIf="transfers.length === 0">
   <p>Aucun transfert n'a été trouvé.</p>
+</div>
+<div class="container m-5">
+  <button class="btn btn-success" routerLink="/newTransfer">
+    New Transfer
+  </button>
 </div>

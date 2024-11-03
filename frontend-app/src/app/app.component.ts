@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend-app';
+  // Dans votre composant Angular
+  logout() {
+    // Logique de déconnexion
+    console.log("Utilisateur déconnecté");
+    // Redirigez l'utilisateur ou nettoyez les données d'authentification
+  }
+
 }
